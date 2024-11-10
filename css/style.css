@@ -1,3 +1,12 @@
+:root {
+  /* Color Theme */
+  --primary-color: #468282; /* Primary Color */
+  --theme-color: #cc6e64;   /* Theme Accent Color */
+  --secondary-color: #50b597; /* Additional Color */
+  --accent-color-1: #9bd7a4; /* Accent Color 1 */
+  --accent-color-2: #ddf5c3; /* Accent Color 2 */
+}
+
 /* global */
 img {
   width: 100%;
@@ -10,7 +19,6 @@ h1 {
 }
 
 .contact-info {
-
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -18,7 +26,7 @@ h1 {
 }
 
 .email-link {
-  color: #007bff;
+  color: var(--theme-color); /* Updated */
   text-decoration: none;
 }
 
@@ -48,15 +56,237 @@ section:nth-child(even) {
   top: 60px;
   height: 10px;
   width: 0%;
-  background-color: blue;
+  background-color: var(--secondary-color); /* Updated */
   z-index: 100;
 }
 
 footer {
   padding: 4rem;
-  background-color: #343434;
-  color: #f3f3f3;
+  background-color: var(--primary-color); /* Updated */
+  color: var(--accent-color-2); /* Updated */
   font-size: 1rem;
   text-align: center;
 }
 
+/* Footer Styling */
+.footer {
+  background-color: var(--primary-color); /* Updated */
+  color: var(--accent-color-2); /* Updated */
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left h4, .footer-center h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--theme-color); /* Updated */
+}
+
+.footer-left p {
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: var(--accent-color-2); /* Updated */
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-center ul li a {
+  color: var(--accent-color-2); /* Updated */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-center ul li a:hover {
+  color: var(--theme-color); /* Updated */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  color: #ffffff !important; /* Force the text to be white */
+  font-weight: bold;
+}
+
+.footer-bottom a {
+  color: var(--theme-color) !important; /* Updated */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: var(--accent-color-1); /* Updated */
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Base Styles */
+body {
+  font-size: 16px; /* Base font size */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Headings */
+h1 {
+  font-size: 36px; /* Main heading */
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5, h6 {
+  font-size: 16px;
+}
+
+/* Button and Link Text */
+button, .btn, a {
+  font-size: 16px;
+}
+
+/* Footer and Fine Print */
+footer, .footer p, .footer a {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px; /* Slightly larger text on mobile for readability */
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  h4 {
+    font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Adjust Body Font Size */
+  body {
+    font-size: 18px; /* Slightly larger text for readability on smaller screens */
+  }
+  
+  /* Header and Navbar */
+  .header-wrapper {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .navbar__link {
+    padding: 1rem 0;
+    font-size: 1rem; /* Adjust navbar link size */
+  }
+
+  /* Section Adjustments */
+  .section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .section .intro {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .section img {
+    max-height: none; /* Remove fixed height on images */
+    width: 80%; /* Adjust width */
+    margin: 0 auto; /* Center images */
+  }
+
+  /* Heading Sizes */
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+
+  /* Button Adjustments */
+  .btn {
+    padding: 0.8rem 1.5rem; /* Larger tap targets */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  /* Footer Adjustments */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .footer p, .footer a {
+    font-size: 14px; /* Adjust footer text size */
+  }
+}
